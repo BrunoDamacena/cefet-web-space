@@ -5,8 +5,10 @@ let paragraphs = document.querySelectorAll('#aliens p');
 
 for (let paragraph of paragraphs) {
     let button = paragraph.querySelector('button');
-    button.addEventListener('click', function() {
-        paragraph.classList.toggle('expandido');
-        button.innerHTML = button.innerHTML === '+' ? '-' : '+';
-    });
+    if (button) {
+        button.addEventListener('click', function() {
+            paragraph.classList.toggle('expandido');
+            button.innerHTML = button.innerHTML === '+' ? '-' : '+';
+        });
+    }
 }
